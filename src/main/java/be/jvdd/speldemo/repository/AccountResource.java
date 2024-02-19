@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
 public interface AccountResource extends PagingAndSortingRepository<Account, Long>, CrudRepository<Account, Long> {
     
     @Override
-    @PreAuthorize("#account.id == null")
+    @PreAuthorize("#account.accountName == 'accountX'")
     Account save(Account account);
 }
